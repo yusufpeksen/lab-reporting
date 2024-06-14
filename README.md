@@ -27,25 +27,21 @@ Bu projeyi çalıştırabilmek için aşağıdaki yazılımların sisteminize ku
 
 İlk olarak, projenin bulunduğu GitHub deposunu klonlayın:
 
-```bash
 git clone https://github.com/yusufpeksen/lab-reporting.git
 2. Proje Dizini İçine Girin
 Klonlama işleminden sonra, proje dizinine girin:
 
-bash
 Kodu kopyala
 cd lab-reporting
 3. Gerekli Bağımlılıkları Yükleyin
 Projenin çalışabilmesi için gerekli olan bağımlılıkları yükleyin:
 
-bash
 Kodu kopyala
 npm install
 Projeyi Çalıştırma
 Geliştirme Sunucusunu Başlatın
 Bağımlılıkları yükledikten sonra, geliştirme sunucusunu başlatın:
 
-bash
 Kodu kopyala
 npm start
 Bu komut, uygulamanızı yerel olarak çalıştırır ve web tarayıcınızda http://localhost:3000 adresinde açılacaktır.
@@ -62,19 +58,16 @@ Raporları tarih sırasına göre sıralamak için sıralama seçeneğini kullan
 Yapılandırma
 Eğer projede özel yapılandırmalar yapmanız gerekiyorsa, .env dosyasını kullanarak çevresel değişkenleri ayarlayabilirsiniz. Örnek bir .env dosyası şu şekilde olabilir:
 
-plaintext
 Kodu kopyala
 REACT_APP_API_URL=http://localhost:5000
 Testler
 Projedeki testleri çalıştırmak için aşağıdaki komutu kullanabilirsiniz:
 
-bash
 Kodu kopyala
 npm test
 Dağıtım
 Projeyi üretim ortamına dağıtmak için, aşağıdaki komutu çalıştırarak üretim için optimize edilmiş dosyaları oluşturabilirsiniz:
 
-bash
 Kodu kopyala
 npm run build
 Bu komut, build dizininde optimize edilmiş ve minify edilmiş dosyaları oluşturur. Bu dosyaları, tercih ettiğiniz bir sunucuya veya hosting hizmetine yükleyebilirsiniz.
