@@ -29,7 +29,8 @@ Projeyi Çalıştırma
 Geliştirme Sunucusunu Başlatın
 Bağımlılıkları yükledikten sonra, geliştirme sunucusunu başlatın:
 
-npm start
+npm run dev
+
 Bu komut, uygulamanızı yerel olarak çalıştırır ve web tarayıcınızda http://localhost:3000 (farkli ise terminalde gerekli bağlantı bulunur) adresinde açılacaktır.
 
 Kullanım
