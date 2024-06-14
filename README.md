@@ -56,4 +56,4 @@ Bu proje MIT Lisansı ile lisanslanmıştır.
 İletişim
 Herhangi bir sorunuz veya geri bildiriminiz varsa, lütfen bizimle iletişime geçin:
 
-Email: yusufpeksen77@gmail.com
+Email: ahmetpeksen77@gmail.com
