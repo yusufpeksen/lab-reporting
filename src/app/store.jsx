@@ -28,6 +28,4 @@ export const store = configureStore({
 
 export const persistor = persistStore(store);
 
-//persistor.purge().then(() => { // BURASI LOCAL BIR DATABASE GIBI CALISIYOR , SIFIRLANMASINI ISTERSEN CALISTIR
-//    console.log('Persisted state has been cleared.');
-//  });
+persistor.purge() // BURASI LOCAL BIR DATABASE GIBI CALISIYOR , SIFIRLANMASINI ISTERSEN CALISTIR

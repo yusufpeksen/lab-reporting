@@ -9,8 +9,7 @@ const laborantSlice = createSlice({
   initialState,
   reducers: {
     laborantAdd: (state, action) => {
-      const { hospitalId, name, surname } = action.payload;
-      state.push({ hospitalId, name, surname });
+      state.push(action.payload);
     },
   },
 });

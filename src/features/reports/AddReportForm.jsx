@@ -44,10 +44,6 @@ const AddReportForm = () => {
   const handleChange = (e) => {
     let { name, value } = e.target;
 
-    if (e.target.name === 'patientSSN') {
-      value = value.replace(/\D/g, '');
-    }
-
     setFormData({ ...formData, [name]: value });
   };
 
@@ -137,6 +133,7 @@ const AddReportForm = () => {
         required
         size='lg'
         radius="lg"
+        type='number'
       />
       <TextInput
         className='my-3'
