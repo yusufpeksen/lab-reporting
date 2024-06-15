@@ -28,4 +28,4 @@ export const store = configureStore({
 
 export const persistor = persistStore(store);
 
-persistor.purge() // BURASI LOCAL BIR DATABASE GIBI CALISIYOR , SIFIRLANMASINI ISTERSEN CALISTIR
+//persistor.purge() // BURASI LOCAL BIR DATABASE GIBI CALISIYOR , SIFIRLANMASINI ISTERSEN CALISTIR

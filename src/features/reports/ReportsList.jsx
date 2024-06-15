@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectAllReports, deleteReport } from './reportsSlice';
-import { Card, Text, ActionIcon, Group } from '@mantine/core';
+import { Card, ActionIcon, Group, TextInput, NativeSelect } from '@mantine/core';
 import { IconEdit, IconTrash } from '@tabler/icons-react';
 import { useNavigate } from 'react-router-dom';
 
@@ -31,10 +31,11 @@ const ReportList = () => {
 
   const handleSort = (e) => {
     const selectedOption = e.target.value;
-    setSortBy(selectedOption);
 
-    if (selectedOption === 'reportDate') {
-      setSortOrder(order => order === 'asc' ? 'desc' : 'asc');
+    if (selectedOption === 'asc') {
+      setSortOrder('asc');
+    } else if (selectedOption === 'desc') {
+      setSortOrder('desc');
     }
   };
 
@@ -49,7 +50,7 @@ const ReportList = () => {
     if (sortBy === 'reportDate') {
       const dateA = new Date(a.reportDate);
       const dateB = new Date(b.reportDate);
-      return sortOrder === 'asc' ? dateA - dateB : dateB - dateA;
+      return sortOrder === 'asc' ? dateB - dateA : dateA - dateB;
     }
     return 0;
   });
@@ -86,21 +87,21 @@ const ReportList = () => {
   return (
     <div className='mt-[200px]'>
       <div className="flex justify-between mb-4 min-w-[1300px]">
-        <input
+        <TextInput
           type="text"
           placeholder="Hasta adı/soyadı, Hasta kimlik numarası, Laborant adı/soyadı ile ara"
           className="px-3 py-2 border border-gray-300 rounded-lg outline-none w-[500px]"
           value={searchTerm}
           onChange={handleSearch}
         />
-        <select
+        <NativeSelect
           className="px-3 py-2 border border-gray-300 rounded-lg outline-none"
-          value={sortBy}
+          value={sortOrder} // Use sortOrder directly as value
           onChange={handleSort}
         >
-          <option value="reportDate">Rapor Tarihine Göre Sırala Yakın</option>
-          <option value="reportDateDesc">Rapor Tarihine Göre Sırala Uzak</option>
-        </select>
+          <option value="asc">Rapor Tarihine Göre Sırala Yakın</option>
+          <option value="desc">Rapor Tarihine Göre Sırala Uzak</option>
+        </NativeSelect>
       </div>
       {renderedReports}
     </div>
