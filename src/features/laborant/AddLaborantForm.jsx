@@ -17,7 +17,6 @@ const AddLaborantForm = () => {
     const handleChange = (e) => {
       let {name , value} = e.target
 
-
       setFormData({ ...formData, [name] : value})
     }
 

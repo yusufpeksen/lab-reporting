@@ -11,9 +11,12 @@ const laborantSlice = createSlice({
     laborantAdd: (state, action) => {
       state.push(action.payload);
     },
+    laborantDelete: (state, action) => {
+      return state.filter(laborant => laborant.hospitalId !== action.payload)
+    }
   },
 });
 
 export const selectAllLaborants = (state) => state.laborants;
-export const { laborantAdd } = laborantSlice.actions;
+export const { laborantAdd , laborantDelete } = laborantSlice.actions;
 export default laborantSlice.reducer;
