@@ -96,7 +96,7 @@ const ReportList = () => {
         />
         <NativeSelect
           className="px-3 py-2 border border-gray-300 rounded-lg outline-none"
-          value={sortOrder} // Use sortOrder directly as value
+          value={sortOrder} 
           onChange={handleSort}
         >
           <option value="asc">Rapor Tarihine Göre Sırala Yakın</option>

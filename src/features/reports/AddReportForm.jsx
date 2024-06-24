@@ -10,8 +10,8 @@ const AddReportForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
-  const initialData = location.state?.initialData;
   const laborants = useSelector(selectAllLaborants);
+  const initialData = location.state?.initialData;
 
   const [formData, setFormData] = useState({
     reportId: initialData ? initialData.reportId : nanoid(),
